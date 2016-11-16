@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="//cdn.livechatinc.com/boilerplate/1.0.css">
+        <script type="text/javascript" src="//cdn.livechatinc.com/boilerplate/1.0.js"></script>
+        <script type="text/javascript" src="/js/script.js"></script>
+    </head>
+    <body>
+        <div class="chat-plugin" id="chatPluginContainer">
+            <ul class="chat-plugin__menu">
+                <li class="chat-plugin__menu__item chat-plugin__menu__item--active"><a href=""><span class="app-icon app-icon-dashboard" title="Contact"></span></a></li>
+            </ul>
+            <section class="chat-plugin__content">
+                <div class="chat-plugin__content--centered">
+                    <p class="chat-plugin__p">
+                        Pick a visitor or chat to view details
+                    </p>
+                </div>
+                <dl class="chat-plugin__dl">
+                    <dt>Visitor ID</dt>
+                    <dd id="visitorID"></dd>
+                    <dt>Visitor Name</dt>
+                    <dd id="visitorName"></dd>
+                    <dt>Visitor Email</dt>
+                    <dd id="visitorEmail"></dd>
+                    <dt>Chat ID</dt>
+                    <dd id="chatID"></dd>
+                </dl>
+            </section>
+        </div>
+        <div class="chat-plugin" id="authorizeError" style="display: none">
+            <div class="chat-plugin__content--centered">
+                <p class="chat-plugin__p">
+                    Authorization error
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
