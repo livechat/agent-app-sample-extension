@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang=en>
+    <title>Sample App</title>
+    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="//cdn.livechatinc.com/boilerplate/1.0.js"></script>
+    <link rel="stylesheet" href="//cdn.livechatinc.com/boilerplate/1.0.css">
+    <script type="text/javascript">
+        LiveChat.on("customer_profile", function(data) {
+            $("#visitorDetails").html("Visitor email: " + data.email);
+        });
+        LiveChat.init();
+    </script>
+    <p class="chat-plugin__p" id="visitorDetails">
+        Pick a visitor or chat to view details
