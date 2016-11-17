@@ -8,3 +8,5 @@ App.collections.Integrations.add({
   url: 'https://your-extension.ulr/'
 })
 ```
+
+Extension url must be available over HTTPS.
