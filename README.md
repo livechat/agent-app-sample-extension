@@ -1,4 +1,4 @@
-## LiveChat: Agent App Extension Example (Symfony & Silex)
+## LiveChat: Agent App Extension Example (PHP & Silex)
 
 This is an example of [Agent App Extension](https://docs.livechatinc.com/agent-app-extension/).
 
