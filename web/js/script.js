@@ -24,6 +24,8 @@
             $('#visitorName').html(data.name);
             $('#visitorEmail').html(data.email);
             $('#chatID').html(data.chat.id);
+            $('#groupID').html(data.chat.groupID);
+            console.log(data.chat);
         }
     }
 
