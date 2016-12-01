@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 <html lang=en>
-    <title>Sample App</title>
-    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="//cdn.livechatinc.com/boilerplate/1.0.js"></script>
-    <link rel="stylesheet" href="//cdn.livechatinc.com/boilerplate/1.0.css">
-    <script type="text/javascript">
-        LiveChat.on("customer_profile", function(data) {
-            $("#visitorDetails").html("Visitor email: " + data.email);
-        });
-        LiveChat.init();
-    </script>
-    <p class="chat-plugin__p" id="visitorDetails">
-        Pick a visitor or chat to view details
+    <head>
+        <title>Sample App</title>
+        <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="//cdn.livechatinc.com/boilerplate/1.0.js"></script>
+        <link rel="stylesheet" href="//cdn.livechatinc.com/boilerplate/1.0.css">
+        <script type="text/javascript">
+            function getPropertyValue(data, propertyName) {
+                return undefined === data[propertyName] ? '' : data[propertyName];
+            }
+            LiveChat.on("customer_profile", function(data) {
+                $('#visitorID').html(getPropertyValue(data, 'id'));
+                $('#visitorName').html(getPropertyValue(data, 'name'));
+                $('#visitorEmail').html(getPropertyValue(data, 'email'));
+                $('#chatID').html(getPropertyValue(data.chat, 'id'));
+                $('#groupID').html(getPropertyValue(data.chat, 'groupID'));
+            });
+            LiveChat.init();
+        </script>
+    </head>
+    <body>
+        <div class="chat-plugin" id="chatPluginContainer">
+            <ul class="chat-plugin__menu">
+                <li class="chat-plugin__menu__item chat-plugin__menu__item--active"><a href=""><span class="app-icon app-icon-dashboard" title="Contact"></span></a></li>
+            </ul>
+            <section class="chat-plugin__content">
+                <div class="chat-plugin__content--centered">
+                    <p class="chat-plugin__p">
+                       Well hello there!<br/>Pick a visitor or chat to view details.
+                    </p>
+                </div>
+                <dl class="chat-plugin__dl">
+                    <dt>Visitor ID</dt>
+                    <dd id="visitorID"></dd>
+                    <dt>Visitor Name</dt>
+                    <dd id="visitorName"></dd>
+                    <dt>Visitor Email</dt>
+                    <dd id="visitorEmail"></dd>
+                    <dt>Chat ID</dt>
+                    <dd id="chatID"></dd>
+                    <dt>Group ID</dt>
+                    <dd id="groupID"></dd>
+                </dl>
+            </section>
+        </div>
+    </body>
+</html>
