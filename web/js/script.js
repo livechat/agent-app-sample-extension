@@ -25,6 +25,7 @@
             $('#visitorEmail').html(data.email);
             $('#chatID').html(data.chat.id);
             $('#groupID').html(data.chat.groupID);
+            $('#source').html(data.source);
             console.log(data.chat);
         }
     }

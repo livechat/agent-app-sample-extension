@@ -15,6 +15,7 @@
                 $('#visitorEmail').html(getPropertyValue(data, 'email'));
                 $('#chatID').html(getPropertyValue(data.chat, 'id'));
                 $('#groupID').html(getPropertyValue(data.chat, 'groupID'));
+                $('#source').html(getPropertyValue(data, 'source'));
             });
             LiveChat.init();
         </script>
@@ -41,6 +42,8 @@
                     <dd id="chatID"></dd>
                     <dt>Group ID</dt>
                     <dd id="groupID"></dd>
+                    <dt>Source</dt>
+                    <dd id="source"></dd>
                 </dl>
             </section>
         </div>
