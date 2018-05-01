@@ -14,13 +14,13 @@ Your extension should be hosted over HTTPS.
 
 ### Turn on the extension
 
-Navigate to https://my.livechatinc.com/ and paste the following snippet in the developers console.
+To turn on the extension for testing purposes, you to need create new app in your [Developers Console](https://developers.livechatinc.com/console/)
 
-```js
-App.collections.Integrations.add({
-  id: 'sandbox',
-  url: 'https://your_extension_url'
-})
-```
+1. First, log into your LiveChat's Developer Console and go to Apps section.
+2. Click on *New app* button to proceed.
+3. We will leave naming the app to you but remember to choose the Web app as the type of your application. After that, click on Continue to create your new app.
+4. Open your newly created app and proceed to Features section.
+5. Put your extension URL (it would be `https://localhost:3333`) in Features > Agent App Extension section. To continue, save changes.
+6. Go to Distribution tab and install the app on your LiveChat license.
 
 Enjoy! :rocket:
